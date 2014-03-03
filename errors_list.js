@@ -14,12 +14,18 @@ Template.meteorError.rendered = function() {
     });
 
     $('.message')
-      .transition({
-        animation : 'scale',
-        duration  : '3s',
-        complete  : function() {
-          Meteor.Errors.clear()
+    .transition({
+        animation : 'fade down',
+        duration  : '2s',
+    })
+    .transition({
+        animation: 'fade down',
+        duration: '3s',
+        complete : function() {
+            Meteor.setTimeout(function() {
+                Meteor.Errors.clear();
+            }, 1000);
         }
-      });
+    });
 
 };
