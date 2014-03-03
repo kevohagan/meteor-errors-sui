@@ -4,8 +4,12 @@
 {{/each}}
 </template>
 <template name="meteorError">
-<div class="alert alert-error">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    {{message}}
+<div class="ui page grid center aligned stackable one column" id="errors-grid">
+  <div class="column">
+    <div class="ui error small message center aligned hidden">
+      <p>{{message}}</p>
+    </div>
+  </div>
 </div>
+
 </template>

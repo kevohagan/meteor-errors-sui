@@ -12,4 +12,14 @@ Template.meteorError.rendered = function() {
             }
         });
     });
+
+    $('.message')
+      .transition({
+        animation : 'scale',
+        duration  : '3s',
+        complete  : function() {
+          Meteor.Errors.clear()
+        }
+      });
+
 };
