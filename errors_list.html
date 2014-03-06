@@ -3,11 +3,14 @@
 {{> meteorError}}
 {{/each}}
 </template>
+
 <template name="meteorError">
-<div class="ui page grid center aligned stackable one column" id="errors-grid">
-  <div class="column">
-    <div class="ui error small message center aligned hidden">
-      <p>{{message}}</p>
+
+<div class="ui small modal " id="sui-error">
+  <div class="ui message {{style}}">
+    <i class="close icon"></i>
+    <div class="ui header center aligned">
+      <div>{{message}}</div>
     </div>
   </div>
 </div>
